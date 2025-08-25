@@ -22,10 +22,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import com.example.thmanya.ui.theme.plexsansArabicBold
 
 /**
  * Created by AsmaaHassan on 22,August,2025
- * Trufla Technology,
  * Cairo, Egypt.
  */
 
@@ -43,13 +43,23 @@ fun sectionHeader(title: String, onClick: Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .background(Color.Black)
-            .padding(horizontal = 8.dp, vertical = 12.dp),
+            .padding(horizontal = 8.dp, vertical = 12.dp)   ,
         horizontalArrangement = Arrangement.SpaceBetween // Distribute space evenly, placing first and last items at the edges
         ,
         verticalAlignment = Alignment.CenterVertically
     ) {
+
+        Text(
+            text = title,
+            color = Color.White,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Start,
+            fontFamily = plexsansArabicBold
+        )
+
         Icon(
-            painter = painterResource(id = R.drawable.material_ic_keyboard_arrow_left_black_24dp), // your arrow drawable
+            painter = painterResource(id = R.drawable.material_ic_keyboard_arrow_right_black_24dp),
             contentDescription = "رجوع",
             tint = Color.White,
             modifier = Modifier
@@ -57,14 +67,6 @@ fun sectionHeader(title: String, onClick: Unit) {
                 .clickable {
                     onClick
                 }
-        )
-
-        Text(
-            text = title,
-            color = Color.White,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Start
         )
     }
 }

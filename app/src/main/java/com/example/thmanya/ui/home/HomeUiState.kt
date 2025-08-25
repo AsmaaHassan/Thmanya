@@ -4,7 +4,6 @@ import com.example.thmanya.data.Section
 
 /**
  * Created by AsmaaHassan on 23,August,2025
- * Trufla Technology,
  * Cairo, Egypt.
  */
 sealed class HomeUiState {

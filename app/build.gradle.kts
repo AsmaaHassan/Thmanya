@@ -79,9 +79,6 @@ dependencies {
     //Jet pack Navigation component
     implementation("androidx.navigation:navigation-compose:2.7.7") // Use the latest stable version
 
-
-
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.2")
     implementation("androidx.compose.material3:material3-android:1.2.1")
     //compose
     implementation("androidx.constraintlayout:constraintlayout-compose:1.1.1")
@@ -89,8 +86,20 @@ dependencies {
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
-
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+
+    // Mocking library (e.g., Mockito)
+    testImplementation("org.mockito:mockito-core:4.11.0")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:4.1.0") // Mockito for Kotlin
+
+// Coroutine testing library
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+
+// To run tests on the JVM
+    testImplementation("androidx.test:runner:1.5.2")
+
+// For InstantTaskExecutorRule if you need to test LiveData
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
 
 
 }
